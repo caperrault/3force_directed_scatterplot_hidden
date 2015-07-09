@@ -50,7 +50,7 @@ div.mapTooltip {
   position: absolute;
   text-align: left;
   color: white;
-  padding: 0px 0px 5px 0px;
+  padding: 0px 0px 0px 0px;
   font-size: 12px;
   font-family: Helvetica, Arial, inherit;
   font-weight: bold;
@@ -183,7 +183,7 @@ d3.csv("graph2.csv", function(error, data) {
            .attr("class", "displayed")
            .on("mouseover", function(d) {
                                        div.transition().duration(300).style("opacity", 1);
-                                       div.html("<img src=img_med/" + d.name + ".png > <br/><br/>"  + d.name + " (" + d.year + ")")
+                                       div.html("<img src=img_med/" + d.name + ".png > <br/><p style = text-indent:5px>"  + d.name + " (" + d.year + ")</p>")
                                        .style("left", (d3.event.pageX) + "px")
                                        .style("top", (d3.event.pageY-10) + "px")
                                        .style("clear", "both");
